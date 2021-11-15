@@ -3,9 +3,9 @@ const toggleThemeBtnParent = document.querySelector("#toggleThemeBtnParent");
 toggleThemeBtnParent.appendChild(toggleThemeBtn) // from darkMode.js file
 // #endregion
 
-// #region || new phone
+// #region || populate select options || country img refresh || switch button || fetch exchange rate
 
-// fetch currencies and populate select tags with currency options
+// fetch list of currencies and populate select tags with currency options
 const select = document.querySelectorAll("select");
 
 fetch("https://api.frankfurter.app/currencies")
@@ -46,26 +46,21 @@ function refreshSelectedImage() {
 select[0].addEventListener("change", () => {
     refreshSelectedImage();
     calculateExchangeRate();
-    //calculateSalaries(0);
 })
 
 select[1].addEventListener("change", () => {
     refreshSelectedImage();
     calculateExchangeRate();
-    //calculateSalaries(0);
 })
 
 // switch button
-
 const switchBtn = document.querySelector("#switchBtn");
-
 switchBtn.addEventListener("click", () => {
     const temp = select[0].value;
 	select[0].value = select[1].value;
 	select[1].value = temp;
     refreshSelectedImage();
     calculateExchangeRate();
-    //calculateSalaries(0);
 })
 
 // fetch exchange rate
@@ -92,7 +87,7 @@ function calculateExchangeRate() {
 
 // #endregion
 
-// #region || Salary calculator and 2 config options 
+// #region || Salary calculator and 2 config settings 
 const inputHoursPerDay = document.querySelector("#inputHoursPerDay");
 const inputDaysPerWeek = document.querySelector("#inputDaysPerWeek");
 const inputArray = document.querySelectorAll(".parent2 input");
@@ -123,7 +118,15 @@ for (let i = 0; i < inputArray.length; i++) {
 
 // i must be index of inputArray.
 function calculateSalaries(i) {
-    // Calculate the value of first input in relation to whichever iteration of inputArray we're currently at.
+    // if input[i] is empty or 0 then turn all other inputs into empty and exit the function.
+    if (inputArray[i].value == 0) {
+        for (let ii = 0; ii < inputArray.length; ii++) {
+            if (i === ii) { continue; }
+            inputArray[ii].value = "";
+        }
+        return;
+    }
+    // Calculate the value of input[0] in relation to whichever iteration of inputArray we're currently at.
     switch (i) {
         case 0:
             break;
@@ -156,15 +159,6 @@ function calculateSalaries(i) {
             break;
         default:
             console.warn("expand switch cases.")
-    }
-
-    // now that inputArray[0] is calculated, if its 0 or empty then set all other inputs to empty to prevent them from being 0.00 and doing a unnecessary loop + switch.
-    if (inputArray[0].value == 0) {
-        for (let ii = 0; ii < inputArray.length; ii++) {
-            if (i === ii) { continue; }
-            inputArray[ii].value = "";
-        }
-        return;
     }
 
     // now that inputArray[0] is calculated, we can calculate the rest of the inputs in relation to it.
@@ -202,10 +196,10 @@ function calculateSalaries(i) {
                 console.warn("expand switch cases.")
         }
     }
-    // if current iteration is not inputArray[0], then set it to fixed value after the calculations, because if we do this before then the calculations will be less precise
+    // if current iteration is not inputArray[0], then set it to fixed value after we're done with the calculations,
+    // if we do this beforehand then the calculations will be less precise.
     if (i != 0) {
         inputArray[0].value = parseFloat((inputArray[0].value)).toFixed(2);
     }
 }
-
 // #endregion
