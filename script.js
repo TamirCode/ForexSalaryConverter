@@ -72,6 +72,12 @@ let exchangeRate = 0.3216
 
 function calculateExchangeRate() {
     console.log("calling")
+    if (select[0].value == select[1].value) {
+        exchangeRateElement.innerText = 1;
+        exchangeRate = 1;
+        calculateSalaries(0);
+        return;
+    }
     fetch(`https://api.frankfurter.app/latest?amount=1&from=${select[0].value}&to=${select[1].value}`)
     .then(resp => resp.json())
     .then(data => {
