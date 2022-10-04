@@ -1,3 +1,4 @@
+const version = "1.0.0" // change version to push update to mobile app
 const cacheName = "TS-CACHE"
 const assets = [
 	"./",
@@ -10,8 +11,6 @@ const assets = [
 	"./assets/android-chrome-192x192.png",
 	"./assets/android-chrome-512x512.png"
 ]
-
-// freecodecamp blog
 
 self.addEventListener("install", installEvent => {
 	installEvent.waitUntil(
@@ -28,26 +27,3 @@ self.addEventListener("fetch", fetchEvent => {
 		})
 	)
 })
-
-// pwa in 10 minutes YT video
-
-// self.addEventListener("install", async e => {
-// 	const cache = await caches.open(cacheName)
-// 	await cache.addAll(assets)
-// 	return self.skipWaiting()
-// })
-
-// self.addEventListener("activate", e => {
-// 	self.clients.claim()
-// })
-
-// self.addEventListener("fetch", async e => {
-// 	const req = e.request
-// 	const url = new URL(req.url)
-
-// 	if (url.origin === location.origin) {
-// 		e.respondWith(cacheFirst(req))
-// 	} else {
-// 		e.respondWith(networkAndCache(req))
-// 	}
-// })
