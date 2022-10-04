@@ -1,258 +1,256 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 html {
 	background-color: var(--bg-color);
 	color: var(--text-color);
-    transition: background-color 0.1s;
+	transition: background-color 0.1s;
 
-    --border-radius: 5px;
-    /* light mode variables */
+	--border-radius: 5px;
+	/* light mode variables */
 	--bg-color: white;
-    --fg-color: rgb(245, 245, 245);
+	--fg-color: rgb(245, 245, 245);
 	--text-color: black;
-    --text-primary-color: black;
-    --input-bg-color: white;
-    --input-font-weight: 300; /* used to be 400 */
-    --input-border-size: 1px;
-    --input-border-color: black;
+	--text-primary-color: black;
+	--input-bg-color: white;
+	--input-font-weight: 300; /* used to be 400 */
+	--input-border-size: 1px;
+	--input-border-color: black;
 }
 
 html.dark {
-    /* dark mode variables */
+	/* dark mode variables */
 	--bg-color: black;
-    --fg-color: rgb(33, 36, 41);
+	--fg-color: rgb(33, 36, 41);
 	--text-color: white;
-    --text-primary-color: rgb(19, 130, 241);
-    --input-bg-color: rgb(52, 57, 65);
-    --input-font-weight: 300;
-    --input-border-size: 1px;
-    --input-border-color: black;
+	--text-primary-color: rgb(19, 130, 241);
+	--input-bg-color: rgb(52, 57, 65);
+	--input-font-weight: 300;
+	--input-border-size: 1px;
+	--input-border-color: black;
 }
 
-input, select, button {
-    background-color: var(--input-bg-color);
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight: var(--input-font-weight);
-    transition: background-color 0.1s, color 0.1s;
+input,
+select,
+button {
+	background-color: var(--input-bg-color);
+	color: var(--text-color);
+	font-family: "Roboto", sans-serif;
+	font-weight: var(--input-font-weight);
+	transition: background-color 0.1s, color 0.1s;
 }
 
 button {
 	border: var(--input-border-size) solid var(--input-border-color);
-    border-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 	padding: 5px;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
+	overscroll-behavior-y: contain;
 }
 
 .flex {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	align-items: center;
 }
 
 .parent {
-    background-color: var(--fg-color); 
-    border-radius: 25px;
-    max-width: 390px;
-    margin: 70px auto 0 auto;
-    padding: 20px;
-    box-shadow: 0 3px 10px rgba(0 0 0 / 0.2);
-    transition: background-color 0.1s, color 0.1s;
+	background-color: var(--fg-color);
+	border-radius: 25px;
+	max-width: 390px;
+	margin: 70px auto 0 auto;
+	padding: 20px;
+	box-shadow: 0 3px 10px rgba(0 0 0 / 0.2);
+	transition: background-color 0.1s, color 0.1s;
 }
 
 .title {
-    width: max-content;
-    margin: auto;
-    color: var(--text-primary-color);
-    transition: color 0.1s;
+	width: max-content;
+	margin: auto;
+	color: var(--text-primary-color);
+	transition: color 0.1s;
 }
 
 h1 {
-    font-size: 20px;
-    font-weight: 500;
-
+	font-size: 20px;
+	font-weight: 500;
 }
 
 h2 {
-    font-weight: 300;
-    font-size: 16px;
+	font-weight: 300;
+	font-size: 16px;
 }
 
-
 input {
-    padding: 3px 5px 3px 5px;
-    border: var(--input-border-size) solid var(--input-border-color);
-    border-radius: var(--border-radius);
+	padding: 3px 5px 3px 5px;
+	border: var(--input-border-size) solid var(--input-border-color);
+	border-radius: var(--border-radius);
 }
 
 .parent2 {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .selectContainer {
-    padding: 3px;
-    border: var(--input-border-size) solid var(--input-border-color);
-    display: flex;
-    justify-content: space-between;
-    width: 122.1px;
-    box-sizing: border-box;
-    background-color: var(--input-bg-color);
-    max-height: 40px;
-    border-radius: var(--border-radius);
-    transition: background-color 0.1s, color 0.1s;
+	padding: 3px;
+	border: var(--input-border-size) solid var(--input-border-color);
+	display: flex;
+	justify-content: space-between;
+	width: 122.1px;
+	box-sizing: border-box;
+	background-color: var(--input-bg-color);
+	max-height: 40px;
+	border-radius: var(--border-radius);
+	transition: background-color 0.1s, color 0.1s;
 }
 
 img {
-    min-width: 25px;
-    max-width: 30px;
-    margin: auto;
+	min-width: 25px;
+	max-width: 30px;
+	margin: auto;
 }
 
 select {
-    border: none;
-    cursor: pointer;
+	border: none;
+	cursor: pointer;
 }
 
 select:focus {
-    outline: none;
+	outline: none;
 }
 
 option {
-    background-color: var(--bg-color);
+	background-color: var(--bg-color);
 }
 
 #switchBtn {
-    cursor: pointer;
-    font-size: 20px;
-    margin: 4px 7px 0 7px;
+	cursor: pointer;
+	font-size: 20px;
+	margin: 4px 7px 0 7px;
 }
 
 .parent2 input {
-    max-width: 110px;
+	max-width: 110px;
 }
 
 .parent2 input:first-child {
-    margin-right: 30px;
+	margin-right: 30px;
 }
 
-#inputHoursPerDay, #inputDaysPerWeek {
-    width: 35px;
+#inputHoursPerDay,
+#inputDaysPerWeek {
+	width: 35px;
 }
 
 .exchangeRateContainer {
-    margin-top: 12px;
-    cursor: pointer;
+	margin-top: 12px;
+	cursor: pointer;
 }
 
 #exchangeRateElement {
-    color: limegreen;
+	color: limegreen;
 }
 
 @media (max-width: 510px) {
-    .parent {
-        margin: 15px auto 0 auto;
-    }
+	.parent {
+		margin: 15px auto 0 auto;
+	}
 
-    .parent2 {
-        margin-top: 15px;
-    }
+	.parent2 {
+		margin-top: 15px;
+	}
 }
 
 @media (max-width: 420px) {
-    h2 {
-        font-size: 14px;
-    }
+	h2 {
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 400px) {
-    .parent2 input {
-        max-width: 100px;
-        box-sizing: border-box;
-    }
+	.parent2 input {
+		max-width: 100px;
+		box-sizing: border-box;
+	}
 
-    .selectContainer {
-        width: 100px;
-    }
+	.selectContainer {
+		width: 100px;
+	}
 }
 
 @media (max-width: 360px) {
-    .parent2 input {
-        max-width: 90px;
-    }
+	.parent2 input {
+		max-width: 90px;
+	}
 
-    .selectContainer {
-        width: 90px;
-    }
+	.selectContainer {
+		width: 90px;
+	}
 }
 
 @media (max-width: 340px) {
+	h2 {
+		font-size: 12px;
+	}
 
-    h2 {
-        font-size: 12px;
-    }
+	.parent2 input {
+		max-width: 80px;
+	}
 
-    .parent2 input {
-        max-width: 80px;
-    }
+	.selectContainer {
+		width: 80px;
+	}
 
-    .selectContainer {
-        width: 80px;
-    }
-
-    img {
-        min-width: 15px;
-        max-width: 30px;
-    }
+	img {
+		min-width: 15px;
+		max-width: 30px;
+	}
 }
 
 @media (max-width: 300px) {
+	h2 {
+		font-size: 11px;
+	}
 
-    h2 {
-        font-size: 11px;
-    }
+	.parent2 input {
+		max-width: 75px;
+		font-size: 11px;
+	}
 
-    .parent2 input {
-        max-width: 75px;
-        font-size: 11px;
-    }
+	.selectContainer {
+		width: 75px;
+	}
 
-    .selectContainer {
-        width: 75px;
-    }
+	select {
+		font-size: 11px;
+	}
 
-    select {
-        font-size: 11px;
-    }
-
-    #switchBtn {
-        font-size: 16px;
-        margin: 4px 9px 0 9px;
-    }
-
+	#switchBtn {
+		font-size: 16px;
+		margin: 4px 9px 0 9px;
+	}
 }
 
 @media (max-width: 290px) {
+	.parent2 input {
+		max-width: 70px;
+	}
 
-    .parent2 input {
-        max-width: 70px;
-    }
+	.selectContainer {
+		width: 70px;
+	}
 
-    .selectContainer {
-        width: 70px;
-    }
-
-    img {
-        max-width: 25px;
-    }
+	img {
+		max-width: 25px;
+	}
 }
