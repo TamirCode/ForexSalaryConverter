@@ -152,16 +152,16 @@ function calculateSalaries(i) {
             inputArray[0].value = (inputArray[i].value / workDaysPerWeek / workHoursPerDay / exchangeRate);
             break;
         case 6: // Monthly 1
-            inputArray[0].value = (inputArray[i].value / 4 / workDaysPerWeek / workHoursPerDay);
+            inputArray[0].value = (inputArray[i].value / 4.345 / workDaysPerWeek / workHoursPerDay);
             break;
         case 7: // Monthly 2
-            inputArray[0].value = (inputArray[i].value / 4 / workDaysPerWeek / workHoursPerDay / exchangeRate);
+            inputArray[0].value = (inputArray[i].value / 4.345 / workDaysPerWeek / workHoursPerDay / exchangeRate);
             break;
         case 8: // Yearly 1 
-            inputArray[0].value = (inputArray[i].value / 12 / 4 / workDaysPerWeek / workHoursPerDay);
+            inputArray[0].value = (inputArray[i].value / 12 / 4.345 / workDaysPerWeek / workHoursPerDay);
             break;
         case 9: // Yearly 2
-            inputArray[0].value = (inputArray[i].value / 12 / 4 / workDaysPerWeek / workHoursPerDay / exchangeRate);
+            inputArray[0].value = (inputArray[i].value / 12 / 4.345 / workDaysPerWeek / workHoursPerDay / exchangeRate);
             break;
         default:
             console.warn("expand switch cases.")
@@ -187,16 +187,16 @@ function calculateSalaries(i) {
                 inputArray[ii].value = (inputArray[0].value * workDaysPerWeek * workHoursPerDay * exchangeRate).toFixed(2);
                 break;
             case 6: // Monthly 1
-                inputArray[ii].value = (inputArray[0].value * 4 * workDaysPerWeek * workHoursPerDay).toFixed(2);
+                inputArray[ii].value = (inputArray[0].value * 4.345 * workDaysPerWeek * workHoursPerDay).toFixed(2);
                 break;
             case 7: // Monthly 2
-                inputArray[ii].value = (inputArray[0].value * 4 * workDaysPerWeek * workHoursPerDay * exchangeRate).toFixed(2);
+                inputArray[ii].value = (inputArray[0].value * 4.345 * workDaysPerWeek * workHoursPerDay * exchangeRate).toFixed(2);
                 break;
             case 8: // Yearly 1 
-                inputArray[ii].value = (inputArray[0].value * 12 * 4 * workDaysPerWeek * workHoursPerDay).toFixed(2);
+                inputArray[ii].value = (inputArray[0].value * 12 * 4.345 * workDaysPerWeek * workHoursPerDay).toFixed(2);
                 break;
             case 9: // Yearly 2
-                inputArray[ii].value = (inputArray[0].value * 12 * 4 * workDaysPerWeek * workHoursPerDay * exchangeRate).toFixed(2);
+                inputArray[ii].value = (inputArray[0].value * 12 * 4.345 * workDaysPerWeek * workHoursPerDay * exchangeRate).toFixed(2);
                 break;
             default:
                 console.warn("expand switch cases.")
