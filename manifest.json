@@ -1,0 +1,29 @@
+{
+	"name": "Salary Converter",
+	"short_name": "Salary Converter",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"theme_color": "#000",
+	"background_color": "#000",
+	"description": "Converts salaries in different exchange rates.",
+	"icons": [
+		{
+			"src": "assets/forex-logo.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "assets/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "assets/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
